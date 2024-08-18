@@ -33,6 +33,7 @@ module.exports = {
       Features: [
         "features/keymaps",
         "features/bluetooth",
+        "features/split-keyboards",
         "features/combos",
         "features/conditional-layers",
         "features/debouncing",
@@ -134,6 +135,7 @@ module.exports = {
         "development/tests",
         "development/usb-logging",
         "development/ide-integration",
+        "development/studio-rpc-protocol",
         {
           type: "category",
           label: "Guides",
