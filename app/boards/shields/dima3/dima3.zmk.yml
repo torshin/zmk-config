@@ -1,0 +1,14 @@
+file_format: "1"
+id: dima3
+name: Dima3
+type: shield
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+  - underglow
+siblings:
+  - dima3_left
+  - dima3_right
