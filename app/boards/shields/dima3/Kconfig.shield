@@ -1,10 +1,5 @@
-config SHIELD_DIMA3
-    bool
-
 config SHIELD_DIMA3_LEFT
     def_bool $(shields_list_contains,dima3_left)
-    select SHIELD_DIMA3
 
 config SHIELD_DIMA3_RIGHT
     def_bool $(shields_list_contains,dima3_right)
-    select SHIELD_DIMA3

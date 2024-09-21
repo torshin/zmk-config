@@ -1,0 +1,113 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // -----------------------------------------------------------------------------------------
+            // | GRV  |  Q  |  W  |  E  |  R  |  T  |                                                                          Y               |  U               |  I   |  O  |  P  | RGUI |
+            // | LCTL | ESC |  A  |  S  |  D  |  F  |                                                                          G               |  H               |  J   |  K  |  L  | SCLN |
+            // | LALT |  Z  |  X  |  C  |  V  |  B              | MO(_NUM) |                                    | SWT_LNG    | N               |  M               | COMM | DOT | SLSH | RALT |
+            //                  | LGUI | LSFT | LT(_RAISE, TAB) | LSFT(SPC) | LT(_LOWER, DEL) | LT(_LOWER, ESC) | RSFT(BSPC) | LT(_RAISE, ENT) | LT(_MOUSE, RSFT) | BSLS |
+            bindings = <
+                &kp GRAVE, &kp Q, &kp W, &kp E, &kp R, &kp T, &kp Y, &kp U, &kp I, &kp O, &kp P, &kp RGUI,
+                &kp LCTL, &kp ESC, &kp A, &kp S, &kp D, &kp F, &kp G, &kp H, &kp J, &kp K, &kp L, &kp SCLN,
+                &kp LALT, &kp Z, &kp X, &kp C, &kp V, &kp B, &mo NUM, &swt_lng, &kp N, &kp M, &kp COMM, &kp DOT, &kp SLSH, &kp RALT,
+                &kp LGUI, &kp LSFT, &lt RAISE_T(KC_TAB), &kp LSFT(KC_SPC), &lt LOWER_T(KC_DEL), &lt LOWER_T(KC_ESC), &kp RSFT(KC_BSPC), &lt RAISE_T(KC_ENT), &lt MOUSE_T(KC_RSFT), &kp BSLS
+            >;
+        };
+
+        game_layer {
+            // -----------------------------------------------------------------------------------------
+            // | ESC  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |      |
+            // | LCTL |     |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  | SCLN |
+            // | LSHFT|  Z  |  X  |  C  |  V  |  B  |      |      |  N  |  M  | COMM | DOT | SLSH |
+            // |      | LALT | TAB | LSHFT | SPC |      |      |      |      |      |
+            bindings = <
+                &kp ESC, &kp Q, &kp W, &kp E, &kp R, &kp T, &kp Y, &kp U, &kp I, &kp O, &kp P, &trans,
+                &kp LCTL, &kp A, &kp S, &kp D, &kp F, &kp G, &kp H, &kp J, &kp K, &kp L, &kp SCLN, &trans,
+                &kp LSHFT, &kp Z, &kp X, &kp C, &kp V, &kp B, &trans, &trans, &kp N, &kp M, &kp COMM, &kp DOT, &kp SLSH, &trans,
+                &trans, &kp LALT, &kp TAB, &kp LSHFT, &kp SPC, &trans, &trans, &trans, &trans, &trans
+            >;
+        };
+
+        lower_layer {
+            // -----------------------------------------------------------------------------------------
+            // | F12  | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 | F11 |
+            // | LCTL | PPLS| !   | @   | #   | $   | %   | ^   | &   | *   | (   | )   | _   |
+            // | LALT | EQL | 1  | 2  | 3  | 4  | 5  |      | 6  | 7  | 8  | 9  | 0  | -   |
+            // |      |      | LT(_THIRD, TAB) |      |      |      |      | LT(_THIRD, ENT) |      |      |
+            bindings = <
+                &kp F12, &kp F1, &kp F2, &kp F3, &kp F4, &kp F5, &kp F6, &kp F7, &kp F8, &kp F9, &kp F10, &kp F11,
+                &kp LCTL, &kp PPLS, &kp EXLM, &kp AT, &kp HASH, &kp DLLR, &kp PERC, &kp CIRC, &kp AMPR, &kp ASTR, &kp LPRN, &kp RPRN, &kp UNDS,
+                &kp LALT, &kp EQL, &kp 1, &kp 2, &kp 3, &kp 4, &kp 5, &trans, &kp 6, &kp 7, &kp 8, &kp 9, &kp 0, &kp RALT_T(KC_MINS),
+                &trans, &trans, &lt THIRD_T(KC_TAB), &trans, &trans, &trans, &trans, &lt THIRD_T(KC_ENT), &trans, &trans
+            >;
+        };
+
+        raise_layer {
+            // -----------------------------------------------------------------------------------------
+            // |      | LSCR | PGUP | UP  | LCTL(HOME) | VOLU | RALT(T) | HOME | UP  | PGUP | LSCR |      |
+            // | LCTL | INS  | LCTL(LEFT) | DOWN | LCTL(RIGHT) | MPLY | MUTE | LEFT | DOWN | RIGHT | INS | RCTL |
+            // |      | PAUS | PGDN | PSCR | LCTL(END) | VOLD |      |      | RALT(M) | END | PSCR | PGDN | PAUS |      |
+            // |      |      |      |      | LT(_THIRD, DEL) | LT(_THIRD, ESC) |      |      |      |      |
+            bindings = <
+                &trans, &kp LSCR, &kp PGUP, &kp UP, &kp LCTL(KC_HOME), &kp VOLU, &kp RALT(KC_T), &kp HOME, &kp UP, &kp PGUP, &kp LSCR, &trans,
+                &kp LCTL, &kp INS, &kp LCTL(KC_LEFT), &kp DOWN, &kp LCTL(KC_RGHT), &kp MPLY, &kp MUTE, &kp LEFT, &kp DOWN, &kp RGHT, &kp INS, &kp RCTL,
+                &trans, &kp PAUS, &kp PGDN, &kp PSCR, &kp LCTL(KC_END), &kp VOLD, &trans, &trans, &kp RALT(KC_M), &kp END, &kp PSCR, &kp PGDN, &kp PAUS, &trans,
+                &trans, &trans, &trans, &trans, &lt THIRD_T(KC_DEL), &lt THIRD_T(KC_ESC), &trans, &trans, &trans, &trans
+            >;
+        };
+
+        mouse_layer {
+            // -----------------------------------------------------------------------------------------
+            // | RALT | GRV |      |      |      | RALT(T) | WH_U | BTN1 | MS_U | BTN2 |      | RALT |
+            // |      |      |      |      |      |      | WH_D | MS_L | MS_D | MS_R |      | RALT |
+            // |      |      |      |      |      |      |      |      |      |      |      |      |
+            // |      |      |      |      |      |      |      |      |      | RALT(BSLS) |
+            bindings = <
+                &kp RALT, &kp GRAVE, &trans, &trans, &trans, &kp RALT(KC_T), &kp WH_U, &kp BTN1, &kp MS_U, &kp BTN2, &trans, &kp RALT,
+                &trans, &trans, &trans, &trans, &trans, &trans, &kp WH_D, &kp MS_L, &kp MS_D, &kp MS_R, &trans, &kp RALT,
+                &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &kp RALT(KC_M), &kp RALT(KC_COMM), &kp RALT(KC_DOT), &kp RALT(KC_SLSH), &kp RALT(KC_RBRC),
+                &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &kp RALT(KC_BSLS)
+            >;
+        };
+
+        num_layer {
+            // -----------------------------------------------------------------------------------------
+            // | NUM  | PSLS | KP7 | KP8 | KP9 | PMNS | RALT(T) | BTN1 | MS_U | BTN2 |      | RALT |
+            // | CALC | PAST | KP4 | KP5 | KP6 | PPLS |      | MS_L | MS_D | MS_R |      | RALT |
+            // | SHFT | DOT  | KP0 | KP1 | KP2 | KP3 |      |      |      |      |      |      |
+            // |      |      |      |      |      |      |      |      |      | RALT(BSLS) |
+            bindings = <
+                &kp NUM, &kp PSLS, &kp KP_7, &kp KP_8, &kp KP_9, &kp PMNS, &kp RALT(KC_T), &kp BTN1, &kp MS_U, &kp BTN2, &trans, &kp RALT,
+                &kp CALC, &kp PAST, &kp KP_4, &kp KP_5, &kp KP_6, &kp PPLS, &trans, &kp MS_L, &kp MS_D, &kp MS_R, &trans, &kp RALT,
+                &kp DOT, &kp KP_0, &kp KP_1, &kp KP_2, &kp KP_3, &trans, &trans, &trans, &kp RALT, &kp RALT, &kp RALT(KC_COMM), &kp RALT(KC_DOT), &kp RALT(KC_SLSH), &kp RALT(KC_RBRC),
+                &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &kp RALT(KC_BSLS)
+            >;
+        };
+
+        third_layer {
+            // -----------------------------------------------------------------------------------------
+            // |      |      |      |      |      |      |      |      |      |      |      |      |
+            // |      |      |      |      |      |      |      |      |      |      |      |      |
+            // |      |      |      |      |      |      |      |      |      |      |      |      |
+            // |      |      |      |      |      |      |      |      |      | RALT(BSLS) |
+            bindings = <
+                &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans,
+                &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans,
+                &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans,
+                &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &kp RALT(KC_BSLS)
+            >;
+        };
+    };
+};
