@@ -24,28 +24,21 @@
 // 24 + 29 = X
 
             bindings = <
-    &kp GRAVE     &kp Q &kp W &kp E    &kp R          &kp T                                                                       &kp Y            &kp U            &kp I     &kp O    &kp P     &kp LBRC
-    &mt LCTL ESC  &kp A &kp S &kp D    &kp F          &kp G                                                                       &kp H            &kp J            &kp K     &kp L    &kp SEMI  &kp SQT
-    &kp LALT      &kp Z &kp X &kp C    &kp V          &kp B         &mo NUM                                        &kp LSHFT      &kp N            &kp M            &kp COMMA &kp DOT  &kp FSLH  &kp RBRC
-                              &kp LGUI &kp LS(TAB)    &lt RAISE TAB &mt LSHFT SPACE &lt LOWER DEL    &lt LOWER ESC &mt RSHFT BSPC &lt RAISE ENTER  &lt MOUSE RSHFT  &kp NUBS
+&kp GRAVE     &kp Q &kp W &kp E    &kp R       &kp T                                                                         &kp Y            &kp U            &kp I     &kp O    &kp P     &kp LBRC
+&mt LCTL ESC  &kp A &kp S &kp D    &kp F       &kp G                                                                         &kp H            &kp J            &kp K     &kp L    &kp SEMI  &kp SQT
+&kp LALT      &kp Z &kp X &kp C    &kp V       &kp B         &mo NUM                                        &kp LGUI(SPACE)  &kp N            &kp M            &kp COMMA &kp DOT  &kp FSLH  &kp RBRC
+                          &kp LGUI &kp LS(TAB) &lt RAISE TAB &mt LSHFT SPACE &lt LOWER DEL    &lt LOWER ESC &mt RSHFT BSPC   &lt RAISE ENTER  &lt MOUSE RSHFT  &kp NUBS
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
-        function_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
-// |       |      |      |BTSEL3|BTSEL4|      |                                         |      |      |      |      |      |      |
-// |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
-//                       |      |      |      |      |      |      |      |      |      |      |      |      |
+        lower_layer {
             bindings = <
-    &trans &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2              &trans &trans &trans &trans &trans &trans
-    &trans &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                    &trans &trans &trans &trans &trans &trans
-    &trans &trans &trans &trans &trans &trans &trans                      &trans &trans &trans &trans &trans &trans &trans
-                         &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+&kp F12         &kp F1   &kp F2 &kp F3   &kp F4   &kp F5                                          &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+&kp LCTL PLUS   &kp EXLM &kp AT &kp HASH &kp DLLR &kp PERC                                        &kp CIRC &kp AMPR &kp ASTR &kp LPRN &kp RPRN &kp UNDS
+&kp LALT EQAUL  &kp 1    &kp 2  &kp 3    &kp 4    &kp 5         &trans                     &trans &kp 6 &kp 7 &kp 8 &kp 9 &kp 0 &kp RALT_T(KC_MINS)
+																&trans &trans     &lt THIRD TAB &trans &trans       &trans &trans &lt THIRD_T(KC_ENT) &trans &trans
+                      >;
         };
     };
 };
