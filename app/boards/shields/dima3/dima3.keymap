@@ -33,12 +33,28 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
         lower_layer {
-            bindings = <
+          bindings = <
 &kp F12         &kp F1   &kp F2 &kp F3   &kp F4   &kp F5                                          &kp F6          &kp F7    &kp F8    &kp F9   &kp F10  &kp F11
-&kp LCTL PLUS   &kp EXLM &kp AT &kp HASH &kp DLLR &kp PERC                                        &kp CIRC        &kp AMPR  &kp ASTR  &kp LPRN &kp RPRN &kp UNDS
-&kp LALT EQAUL  &kp 1    &kp 2  &kp 3    &kp 4    &kp 5         &trans                     &trans &kp 6           &kp 7     &kp 8     &kp 9    &kp 0    &mt RALT MINUS
+&mt LCTL PLUS   &kp EXLM &kp AT &kp HASH &kp DLLR &kp PERC                                        &kp CIRC        &kp AMPR  &kp ASTR  &kp LPRN &kp RPRN &kp UNDS
+&mt LALT EQAUL  &kp 1    &kp 2  &kp 3    &kp 4    &kp 5         &trans                     &trans &kp 6           &kp 7     &kp 8     &kp 9    &kp 0    &mt RALT MINUS
 																&trans &trans     &lt THIRD TAB &trans &trans       &trans &trans &lt THIRD ENTER &trans    &trans
-                      >;
+          >;
+        };
+        raise_layer {
+          bindings = <
+&trans    &kp LSCR  &kp PGUP      &kp UP    &kp LC(HOME) &kp VOLU                                                 &kp RA(T) &kp HOME  &kp UP    &kp PGUP &kp LSCR &trans
+&kp LCTL  &kp INS   &kp LC(LEFT)  &kp DOWN  &kp LC(RGHT) &kp MPLY                                                 &kp MUTE  &kp LEFT  &kp DOWN  &kp RGHT &kp INS  &kp RCTL
+&trans    &kp PAUS  &kp PGDN      &kp PSCR  &kp LC(END)  &kp VOLD &trans                                  &trans  &kp RA(M) &kp END   &kp PSCR  &kp PGDN &kp PAUS &trans
+																	&trans    &trans       &trans   &trans &lt THIRD DEL     &lt THIRD ESC  &trans  &trans    &trans    &trans
+          >;
+        };
+        third_layer {
+          bindings = <
+&trans    &trans  &trans       &trans     &trans  &trans                                                  &trans  &trans  &trans    &trans &trans  &trans
+&trans   &trans    &trans   &trans   &trans  &trans                                                  &trans   &trans   &trans   &trans  &trans   &trans
+&trans    &trans  &trans    &trans  &trans   &trans  &trans                                  &trans  &trans  &trans   &trans  &trans &trans &trans
+														&trans  &trans &trans   &trans &trans                   &trans  &trans  &trans    &trans    &trans
+          >;
         };
     };
 };
