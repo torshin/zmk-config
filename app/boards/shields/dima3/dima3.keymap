@@ -24,10 +24,10 @@
 // 24 + 29 = X
 
             bindings = <
-&kp GRAVE     &kp Q &kp W &kp E    &kp R       &kp T                                                                         &kp Y            &kp U            &kp I     &kp O    &kp P     &kp LBRC
-&mt LCTL ESC  &kp A &kp S &kp D    &kp F       &kp G                                                                         &kp H            &kp J            &kp K     &kp L    &kp SEMI  &kp SQT
-&kp LALT      &kp Z &kp X &kp C    &kp V       &kp B         &mo NUM                                        &kp LGUI(SPACE)  &kp N            &kp M            &kp COMMA &kp DOT  &kp FSLH  &kp RBRC
-                          &kp LGUI &kp LS(TAB) &lt RAISE TAB &mt LSHFT SPACE &lt LOWER DEL    &lt LOWER ESC &mt RSHFT BSPC   &lt RAISE ENTER  &lt MOUSE RSHFT  &kp NUBS
+&kp GRAVE     &kp Q &kp W &kp E    &kp R       &kp T                                                                         &kp Y            &kp U     &kp I     &kp O    &kp P     &kp LBRC
+&mt LCTL ESC  &kp A &kp S &kp D    &kp F       &kp G                                                                         &kp H            &kp J     &kp K     &kp L    &kp SEMI  &kp SQT
+&kp LALT      &kp Z &kp X &kp C    &kp V       &kp B         &mo NUM                                        &kp LGUI(SPACE)  &kp N            &kp M     &kp COMMA &kp DOT  &kp FSLH  &kp RBRC
+                          &kp LGUI &kp LS(TAB) &lt RAISE TAB &mt LSHFT SPACE &lt LOWER DEL    &lt LOWER ESC &mt RSHFT BSPC   &lt RAISE ENTER  &kp RSHFT &kp NUBS
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -48,12 +48,20 @@
 																	&trans    &trans       &trans   &trans &lt THIRD DEL     &lt THIRD ESC  &trans  &trans    &trans    &trans
           >;
         };
+        num_layer {
+ bindings = <
+&kp NUM  &kp PSLS &kp KP_7  &kp KP_8 &kp KP_9 &kp PMNS                                  &kp RALT(KC_T)  &kp BTN1  &kp MS_U          &kp BTN2          &trans &kp RALT
+&kp CALC &kp PAST &kp KP_4  &kp KP_5 &kp KP_6 &kp PPLS                                  &trans          &kp MS_L  &kp MS_D          &kp MS_R          &trans &kp RALT
+&kp DOT  &kp KP_0 &kp KP_1  &kp KP_2 &kp KP_3 &trans    &trans                   &trans &kp RALT        &kp RALT  &kp RALT(KC_COMM) &kp RALT(KC_DOT)  &kp RALT(KC_SLSH)   &kp RALT(KC_RBRC)
+														&trans   &trans   &trans    &trans  &trans  &trans   &trans &trans          &trans    &kp RALT(KC_BSLS)
+  >;
+        };
         third_layer {
           bindings = <
-&trans    &trans  &trans       &trans     &trans  &trans                                                  &trans  &trans  &trans    &trans &trans  &trans
-&trans   &trans    &trans   &trans   &trans  &trans                                                  &trans   &trans   &trans   &trans  &trans   &trans
-&trans    &trans  &trans    &trans  &trans   &trans  &trans                                  &trans  &trans  &trans   &trans  &trans &trans &trans
-														&trans  &trans &trans   &trans &trans                   &trans  &trans  &trans    &trans    &trans
+&trans  &trans      &trans          &trans        &trans        &trans                                         &trans &trans       &trans  &trans &trans &trans
+&trans  &trans      &trans          &trans        &trans        &trans                                         &trans &trans       &trans  &trans &trans &trans
+&trans  &bt BT_CLR  &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt K_LOCK  &trans                     &trans  &trans &trans       &trans  &trans &trans &trans
+																		&trans        &bootloader   &trans      &trans   &trans    &trans  &trans  &trans &bootloader  &trans
           >;
         };
     };
