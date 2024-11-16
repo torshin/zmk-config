@@ -41,18 +41,18 @@
         };
         raise_layer {
           bindings = <
-&trans    &kp LSCR  &kp PGUP      &kp UP    &kp LC(HOME) &kp VOLU                                                 &kp RA(T) &kp HOME  &kp UP    &kp PGUP &kp LSCR &trans
-&kp LCTL  &kp INS   &kp LC(LEFT)  &kp DOWN  &kp LC(RGHT) &kp MPLY                                                 &kp MUTE  &kp LEFT  &kp DOWN  &kp RGHT &kp INS  &kp RCTL
-&trans    &kp PAUS  &kp PGDN      &kp PSCR  &kp LC(END)  &kp VOLD &trans                                  &trans  &kp RA(M) &kp END   &kp PSCR  &kp PGDN &kp PAUS &trans
+&trans    &kp LSCR  &kp PGUP      &kp UP    &kp LC(HOME) &kp C_VOL_UP                                                 &kp RA(T) &kp HOME  &kp UP    &kp PGUP &kp LSCR &trans
+&kp LCTL  &kp INS   &kp LC(LEFT)  &kp DOWN  &kp LC(RGHT) &kp C_PP                                                 &kp MUTE  &kp LEFT  &kp DOWN  &kp RGHT &kp INS  &kp RCTL
+&trans    &kp PAUS  &kp PGDN      &kp PSCR  &kp LC(END)  &kp C_VOL_DN &trans                                  &trans  &kp RA(M) &kp END   &kp PSCR  &kp PGDN &kp PAUS &trans
                                   &trans    &trans       &trans   &trans &lt THIRD DEL     &lt THIRD ESC  &trans  &trans    &trans    &trans
           >;
         };
         num_layer {
  bindings = <
-&kp NUM  &kp PSLS &kp KP_7  &kp KP_8 &kp KP_9 &kp PMNS                                  &kp RALT(KC_T)  &kp BTN1  &kp MS_U          &kp BTN2          &trans &kp RALT
-&kp CALC &kp PAST &kp KP_4  &kp KP_5 &kp KP_6 &kp PPLS                                  &trans          &kp MS_L  &kp MS_D          &kp MS_R          &trans &kp RALT
-&kp DOT  &kp KP_0 &kp KP_1  &kp KP_2 &kp KP_3 &trans    &trans                   &trans &kp RALT        &kp RALT  &kp RALT(KC_COMM) &kp RALT(KC_DOT)  &kp RALT(KC_SLSH)   &kp RALT(KC_RBRC)
-                            &trans   &trans   &trans    &trans  &trans  &trans   &trans &trans          &trans    &kp RALT(KC_BSLS)
+&kp KP_NUM &kp KP_SLASH     &kp KP_N7  &kp KP_N8 &kp KP_N9 &kp KP_MINUS                                 &kp RA(KC_T)  &kp trans  &kp trans          &kp trans          &trans           &kp trans
+&kp K_CALC &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5 &kp KP_N6 &kp KP_PLUS                                  &trans          &kp trans  &kp trans          &kp trans          &trans           &kp trans
+&kp DOT    &kp KP_N0        &kp KP_N1  &kp KP_N2 &kp KP_N3 &kp DOT     &trans                   &trans  &kp trans       &kp trans  &kp RA(COMMA)    &kp RA(DOT)       &kp RA(FSLH)  &kp RA(RBRC)
+                                        &trans   &trans    &trans       &trans  &trans  &trans   &trans &trans          &trans     &kp RA(NUBS)
   >;
         };
         third_layer {
