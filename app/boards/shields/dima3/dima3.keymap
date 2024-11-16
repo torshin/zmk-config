@@ -37,7 +37,7 @@
 &kp F12         &kp F1   &kp F2 &kp F3   &kp F4   &kp F5                                          &kp F6          &kp F7    &kp F8    &kp F9   &kp F10  &kp F11
 &mt LCTL PLUS   &kp EXLM &kp AT &kp HASH &kp DLLR &kp PERC                                        &kp CIRC        &kp AMPR  &kp ASTR  &kp LPRN &kp RPRN &kp UNDS
 &mt LALT EQAUL  &kp 1    &kp 2  &kp 3    &kp 4    &kp 5         &trans                     &trans &kp 6           &kp 7     &kp 8     &kp 9    &kp 0    &mt RALT MINUS
-																&trans &trans     &lt THIRD TAB &trans &trans       &trans &trans &lt THIRD ENTER &trans    &trans
+                                &trans &trans     &lt THIRD TAB &trans &trans       &trans &trans &lt THIRD ENTER &trans    &trans
           >;
         };
         raise_layer {
@@ -45,7 +45,7 @@
 &trans    &kp LSCR  &kp PGUP      &kp UP    &kp LC(HOME) &kp VOLU                                                 &kp RA(T) &kp HOME  &kp UP    &kp PGUP &kp LSCR &trans
 &kp LCTL  &kp INS   &kp LC(LEFT)  &kp DOWN  &kp LC(RGHT) &kp MPLY                                                 &kp MUTE  &kp LEFT  &kp DOWN  &kp RGHT &kp INS  &kp RCTL
 &trans    &kp PAUS  &kp PGDN      &kp PSCR  &kp LC(END)  &kp VOLD &trans                                  &trans  &kp RA(M) &kp END   &kp PSCR  &kp PGDN &kp PAUS &trans
-																	&trans    &trans       &trans   &trans &lt THIRD DEL     &lt THIRD ESC  &trans  &trans    &trans    &trans
+                                  &trans    &trans       &trans   &trans &lt THIRD DEL     &lt THIRD ESC  &trans  &trans    &trans    &trans
           >;
         };
         num_layer {
@@ -53,7 +53,7 @@
 &kp NUM  &kp PSLS &kp KP_7  &kp KP_8 &kp KP_9 &kp PMNS                                  &kp RALT(KC_T)  &kp BTN1  &kp MS_U          &kp BTN2          &trans &kp RALT
 &kp CALC &kp PAST &kp KP_4  &kp KP_5 &kp KP_6 &kp PPLS                                  &trans          &kp MS_L  &kp MS_D          &kp MS_R          &trans &kp RALT
 &kp DOT  &kp KP_0 &kp KP_1  &kp KP_2 &kp KP_3 &trans    &trans                   &trans &kp RALT        &kp RALT  &kp RALT(KC_COMM) &kp RALT(KC_DOT)  &kp RALT(KC_SLSH)   &kp RALT(KC_RBRC)
-														&trans   &trans   &trans    &trans  &trans  &trans   &trans &trans          &trans    &kp RALT(KC_BSLS)
+                            &trans   &trans   &trans    &trans  &trans  &trans   &trans &trans          &trans    &kp RALT(KC_BSLS)
   >;
         };
         third_layer {
@@ -61,7 +61,7 @@
 &trans  &trans      &trans          &trans        &trans        &trans                                         &trans &trans       &trans  &trans &trans &trans
 &trans  &trans      &trans          &trans        &trans        &trans                                         &trans &trans       &trans  &trans &trans &trans
 &trans  &bt BT_CLR  &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt K_LOCK  &trans                     &trans  &trans &trans       &trans  &trans &trans &trans
-																		&trans        &bootloader   &trans      &trans   &trans    &trans  &trans  &trans &bootloader  &trans
+                                    &trans        &bootloader   &trans      &trans   &trans    &trans  &trans  &trans &bootloader  &trans
           >;
         };
     };

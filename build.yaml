@@ -12,8 +12,5 @@
 #     shield: reviung41
 #
 ---
-include:
-  - board: pro_micro
-    shield: dima3_left
-  - board: pro_micro
-    shield: dima3_right
+board: [ "pro_micro" ]
+shield: [ "dima3_left", "dima3_right" ]
