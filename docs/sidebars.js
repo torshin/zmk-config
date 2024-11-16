@@ -25,6 +25,7 @@ module.exports = {
             "troubleshooting/building-issues",
             "troubleshooting/flashing-issues",
             "troubleshooting/connection-issues",
+            "troubleshooting/hardware-issues",
           ],
         },
       ],
@@ -36,7 +37,7 @@ module.exports = {
         "features/split-keyboards",
         "features/debouncing",
         "features/battery",
-        "features/soft-off",
+        "features/low-power-states",
         "features/encoders",
         "features/displays",
         "features/backlight",
@@ -132,6 +133,7 @@ module.exports = {
             "development/hardware-integration/pinctrl",
             "development/hardware-integration/shift-registers",
             "development/hardware-integration/encoders",
+            "development/hardware-integration/soft-off-setup",
           ],
         },
         {
@@ -140,6 +142,7 @@ module.exports = {
           collapsed: true,
           items: [
             "development/contributing/clean-room",
+            "development/contributing/commit-messages",
             "development/contributing/documentation",
           ],
         },
@@ -157,7 +160,7 @@ module.exports = {
               },
               collapsed: true,
               items: [
-                "development/local-toolchain/setup/docker",
+                "development/local-toolchain/setup/container",
                 "development/local-toolchain/setup/native",
               ],
             },
