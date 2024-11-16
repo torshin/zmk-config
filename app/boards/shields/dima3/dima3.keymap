@@ -11,9 +11,8 @@
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
-#define MOUSE   3
-#define NUM     4
-#define THIRD   5
+#define NUM     3
+#define THIRD   4
 
 
 / {
