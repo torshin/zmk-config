@@ -38,10 +38,10 @@
         };
         raise_layer {
           bindings = <
-&trans    &kp SLCK  &kp PG_UP      &kp UP    &kp LC(HOME) &kp C_VOL_UP                                                 &kp RA(T) &kp HOME  &kp UP    &kp PG_UP &kp LSCR &trans
-&kp LCTRL  &kp INS   &kp LC(LEFT)   &kp DOWN  &kp LC(RGHT) &kp C_PP                                                     &kp MUTE  &kp LEFT  &kp DOWN  &kp RGHT  &kp INS  &kp K_APP
-&trans    &kp PAUS  &kp PG_DN      &kp PSCR  &kp LC(END)  &kp C_VOL_DN &trans                                  &trans  &kp RA(M) &kp END   &kp PSCR  &kp PG_DN &kp PAUS &trans
-                                  &trans    &trans       &trans   &trans &lt THIRD DEL     &lt THIRD ESC  &trans  &trans    &trans    &trans
+&trans    &kp SLCK  &kp PG_UP     &kp UP    &kp LC(HOME) &kp C_VOL_UP                                                 &kp RA(T) &kp HOME  &kp UP    &kp PG_UP &kp SLCK &trans
+&kp LCTRL &kp INS   &kp LC(LEFT)  &kp DOWN  &kp LC(RGHT) &kp C_PP                                                     &kp MUTE  &kp LEFT  &kp DOWN  &kp RGHT  &kp INS  &kp K_APP
+&trans    &kp PAUS  &kp PG_DN     &kp PSCR  &kp LC(END)  &kp C_VOL_DN &trans                                  &trans  &kp RA(M) &kp END   &kp PSCR  &kp PG_DN &kp PAUS &trans
+                                  &trans    &trans       &trans       &trans &lt THIRD DEL     &lt THIRD ESC  &trans  &trans    &trans    &trans
           >;
         };
         num_layer {

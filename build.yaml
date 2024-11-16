@@ -11,6 +11,9 @@
 #   - board: nice_nano_v2
 #     shield: reviung41
 #
-#---
-board: ["nice_nano_v2"]
-shield: ["dima3_left", "dima3_right"]
+---
+include:
+  - board: nice_nano_v2
+    shield: dima3_left
+  - board: nice_nano_v2
+    shield: dima3_right
