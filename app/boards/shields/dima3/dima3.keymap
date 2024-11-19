@@ -14,7 +14,6 @@
 #define NUM     3
 #define THIRD   4
 
-
 / {
     keymap {
         compatible = "zmk,keymap";
