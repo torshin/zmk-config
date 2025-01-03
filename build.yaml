@@ -13,4 +13,7 @@
 #
 ---
 board: ["nice_nano_v2"]
-shield: ["dima3_left", "dima3_right", "settings_reset"]
+shield: ["dima3_left", "dima3_right"]
+include:
+  - board: nice_nano_v2
+    shield: settings_reset
