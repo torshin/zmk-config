@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "dima3-layouts.dtsi"
 
 &dima3_layout {
     transform = <&default_transform>;
