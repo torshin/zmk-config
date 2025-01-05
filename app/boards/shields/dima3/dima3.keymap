@@ -25,6 +25,7 @@
                           &kp LGUI &kp LS(TAB) &lt RAISE TAB &mt LSHFT SPACE &lt LOWER DEL    &lt LOWER ESC &mt RSHFT BSPC &lt RAISE ENTER  &kp RSHFT &kp NUBS
             >;
         };
+        /*
         lower_layer {
           bindings = <
 &kp F12         &kp F1   &kp F2 &kp F3    &kp F4    &kp F5                                      &kp F6          &kp F7    &kp F8    &kp F9    &kp F10  &kp F11
@@ -58,5 +59,6 @@
                                     &trans        &trans   &trans      &trans   &trans    &trans  &trans  &trans &trans  &trans
           >;
         };
+        */
     };
 };
