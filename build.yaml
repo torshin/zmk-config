@@ -13,5 +13,5 @@
 #
 ---
 include:
-   - board: nrf52840_m2
-     shield: dima3-left
+ - board: nrf52840_m2
+   shield: dima3-left
