@@ -2,9 +2,6 @@
 
 
 &dima3_position_map {
-    compatible = "zmk,physical-layout-position-map";
-    complete;
-
     joric_jorne_full_posmap: full {
         physical-layout = <&dima3_layout>;
         positions
@@ -15,6 +12,15 @@
     };
 
 };
+
+/ {
+    dima3_position_map: dima3_position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        complete;
+    };
+};
+
 
 / {
     dima3_layout: dima3_layout {
