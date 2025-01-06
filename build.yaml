@@ -12,5 +12,6 @@
 #     shield: reviung41
 #
 ---
-board: ["nrf52840_m2"]
-shield: ["dima3_left", "dima3_right"]
+include:
+   - board: nrf52840_m2
+     shield: dima3-left
