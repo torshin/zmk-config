@@ -12,13 +12,6 @@
 #     shield: reviung41
 #
 ---
-board: ["nice_nano_v2"]
+board: ["nrf52480_m2", "nrfmicro_13"]
 shield:
-  [
-    "dima3_left",
-    "dima3_right",
-    "jian_left",
-    "jian_right",
-    "kyria_rev3_left",
-    "kyria_rev3_right",
-  ]
+  ["dima3_left", "dima3_right"]
