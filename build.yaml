@@ -13,4 +13,4 @@
 #
 ---
 board: ["nice_nano_v2"]
-shield: ["dima3_left", "dima3_right", "jian_left", "jian_right"]
+shield: ["dima3_left", "dima3_right", "jian_left", "jian_right", "kyria_rev3_left", "kyria_rev3_right"]
