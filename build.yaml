@@ -13,5 +13,4 @@
 #
 ---
 board: ["nrf52480_m2", "nrfmicro_13"]
-shield:
-  ["dima3_left", "dima3_right"]
+shield: ["dima3_left", "dima3_right"]
