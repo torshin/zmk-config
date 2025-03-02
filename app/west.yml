@@ -38,5 +38,4 @@ manifest:
       path: modules/msgs/zmk-studio-messages
       remote: zmkfirmware
   self:
-    path: config
     west-commands: scripts/west-commands.yml
