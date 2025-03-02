@@ -1,11 +1,11 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+      url-base: https://github.com/torshin/zmk-config/
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: dima3-module
       import: app/west.yml
   self:
     path: config
