@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: dima3-zmk
-      url-base: https://github.com/torshin/zmk-config/
+      url-base: https://github.com/torshin
   projects:
     - name: zmk
       remote: dima3-zmk
